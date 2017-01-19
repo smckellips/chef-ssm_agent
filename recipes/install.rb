@@ -20,5 +20,6 @@ end
 # Ensure service state
 # @since 0.1.0
 service node['ssm_agent']['service']['name'] do
+  provider Chef::Provider::Service::Upstart
   action node['ssm_agent']['service']['actions']
 end
